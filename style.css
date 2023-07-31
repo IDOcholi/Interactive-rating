@@ -1,0 +1,162 @@
+/* Placing necessary colours in var(iables) for easier and more consistent work. Instead of changing every colour individually, once the colours are assigned to the target elements, everything can be changed painlessly from here!*/
+:root {
+    --white: hsl(0, 0%, 100%);
+    --lightGrey: hsl(217, 12%, 63%);
+    --mediumGrey: hsla(216, 12%, 54%, 0.205);
+    --darkBlue: hsl(213, 19%, 18%);
+    --veryDarkBlue: hsl(216, 12%, 8%);
+    --orange: hsl(25, 97%, 53%);
+  }
+  
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  h1 {
+    margin-bottom: 1em;
+    color: var(--white);
+    font-size: 2rem;
+  }
+
+  p {
+    color: var(--lightGrey);
+    line-height: 1.5;
+    margin-top: 0;
+    font-size: 1.3rem;
+  }
+  
+  body {
+    font-family: "Overpass", sans-serif;
+    background-color: var(--veryDarkBlue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+
+  
+  .card-container{
+    background-color: var(--darkBlue);
+    width: 400px;
+    padding: 1.5em;
+    border-radius: 2em;
+    margin: 2em auto;
+  }
+
+  .card{
+    display: block;
+  }
+
+  .card img {
+    background-color: var(--mediumGrey);
+    border-radius: 50%;
+    padding: 1.5em;
+  }
+  
+  .numbers {
+    color: var(--lightGrey);
+    display: flex;
+    justify-content: space-between;
+    margin: 1.7em 0;
+    font-weight: bold;
+  }
+  
+  .circle {
+    background-color: var(--mediumGrey);
+    border-radius: 50%;
+    padding: 0.8em 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .circle:hover{
+    background-color: var(--lightGrey);
+    color: var(--white);
+  }
+
+  .circle:active{
+    background-color: var(--orange);
+  }
+  
+  .selected {
+    background-color: var(--lightGrey);
+    color: var(--white);
+  }
+  
+  .card button {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: var(--white);
+    background-color: var(--orange);
+    border: none;
+    width: 100%;
+    padding: 1em;
+    border-radius: 3em;
+    display: block;
+    margin: 0 auto;
+    font-weight: bold;
+  }
+  
+  .card button:active {
+    background-color: var(--white);
+    color: var(--orange);
+  }
+  
+  .card button:hover {
+    background-color: var(--white);
+    color: var(--orange);
+    cursor: pointer;
+  }
+  
+  .thankyou {
+    display: none;
+    text-align: center;
+  }
+  
+  .thankyou img {
+    margin-bottom: 1em;
+  }
+  
+  .rating {
+    background-color: var(--mediumGrey);
+    color: var(--orange);
+    border-radius: 1em;
+    padding: 0.5em 1.5em;
+    display: inline-block;
+    margin-bottom: 1em;
+  }
+  
+  input[type="radio"]{
+    display: none;
+  }
+
+  .footer{
+    align-items: center;
+    display: flex;
+    width: 100%;
+}
+
+  .attribution {
+    background-color: var(--orange);
+    color: var(--white);
+    padding-block: 16px;
+     font-size: 15px;
+     font-weight: 500;
+      text-align: center;
+     }
+    .attribution a {
+       color: var(--white);
+       text-decoration: none;
+       }
+  
+  @media only screen and (max-width: 600px) {
+    .card{
+      padding: 1.9em;
+      width: 95%;
+    }
+  }
+  
